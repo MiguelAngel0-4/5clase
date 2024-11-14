@@ -21,5 +21,10 @@ class HashTable {
         this.table[index] = [nombre, numero]; // <-- para sobrescribir cualquier valor anterior
     }
 
+    //#4 Obtener el numero de telefono de un contacto
+    getNumero(nombre) {
+        const index = this._hash(nombre);
+        return this.table[index] ? this.table[index][1] : "Contacto no encontrado";
+    }
     
 }
