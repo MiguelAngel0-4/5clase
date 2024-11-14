@@ -26,5 +26,13 @@ class HashTable {
         const index = this._hash(nombre);
         return this.table[index] ? this.table[index][1] : "Contacto no encontrado";
     }
-    
+
+    //#5 Eliminar un contacto
+    eliminarContacto(nombre) {
+        const index = this._hash(nombre);
+        if (this.table[index] && this.table[index][0] === nombre) {
+            this.table[index] = undefined;
+        }
+    }
+
 }
