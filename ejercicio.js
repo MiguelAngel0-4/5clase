@@ -3,7 +3,7 @@
 class HashTable {
     constructor(tamaño) {
         this.table = new Array(tamaño);
-        this.size = tamaño;
+        this.tamaño = tamaño;
     }
 
     //#2 Función hash para calcular un índice basado en la clave
@@ -37,7 +37,7 @@ class HashTable {
 
 }
 
-const contactos = new HashTable(15);
+const contactos = new HashTable(20);
 
 // Agregar contactos
 contactos.añadirContacto("Alice", "3102905775");
