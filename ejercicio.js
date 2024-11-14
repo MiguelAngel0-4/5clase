@@ -15,5 +15,11 @@ class HashTable {
         return hash % this.tamaño;
     }
 
+    //#3 Agregar o actualizar un contacto
+    añadirContacto(nombre, numero) {
+        const index = this._hash(nombre);
+        this.table[index] = [nombre, numero]; // <-- para sobrescribir cualquier valor anterior
+    }
+
     
 }
