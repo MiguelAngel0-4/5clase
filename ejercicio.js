@@ -36,3 +36,20 @@ class HashTable {
     }
 
 }
+
+const contactos = new HashTable(15);
+
+// Agregar contactos
+contactos.añadirContacto("Alice", "3102905775");
+contactos.añadirContacto("Bob", "3122915775");
+
+// Buscar contactos
+console.log(contactos.getNumero("Alice"));
+
+// Modificar el número de un contacto
+contactos.añadirContacto("Alice", "3008795475");
+console.log(contactos.getNumero("Alice"));
+
+// Eliminar un contacto
+contactos.eliminarContacto("Bob");
+console.log(contactos.getNumero("Bob"));
